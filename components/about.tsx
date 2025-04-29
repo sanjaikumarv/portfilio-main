@@ -80,7 +80,7 @@ export default function About() {
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-pink-200 dark:bg-pink-900/30 rounded-br-2xl z-0"></div>
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <Image
-                  src="/AGOM1655.jpg"
+                  src="/AGOM1655.png"
                   alt="Sanjaikumar Veerasamy"
                   width={600}
                   height={600}
