@@ -10,6 +10,7 @@ import Link from "next/link"
 
 const projects = [
   {
+    id: 1,
     title: "Used Computer (UDC) Rewamp",
     period: "March 2025 - Till Now",
     description:
@@ -18,6 +19,7 @@ const projects = [
     features: [
       "Rewamped all UI components with React for all types of form inputs",
       "Rewamped all API's for projects",
+      "Major bug fixes and performance improvements",
       "Node mailer SMTP setup for mail notification",
       "Twilio SMS API setup for OTP verification",
       "Rewamped Billplz gateway for payments",
@@ -31,6 +33,7 @@ const projects = [
     },
   },
   {
+    id: 2,
     title: "Mobilab2u",
     period: "July 2024 - Till Now",
     description:
@@ -53,6 +56,7 @@ const projects = [
     },
   },
   {
+    id: 3,
     title: "NCER web (NEST)",
     period: "September 2023 - November 2024",
     description:
@@ -73,6 +77,7 @@ const projects = [
     },
   },
   {
+    id: 4,
     title: "Awan BMS",
     period: "November 2022 - May 2023",
     description:
@@ -94,10 +99,11 @@ const projects = [
     },
   },
   {
+    id: 5,
     title: "Slot booking",
     period: "November 2022 - July 2023",
     description: "Slot booking is a booking- based application.People can book the multipurpose hall for their events or ceremonies, etc.The hall details and services are shown on the booking page.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Express", "Storybook"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Express"],
     features: [
       "Created all UI components with React for all types of form inputs",
       "Storybook implementation for individual UI components",
@@ -105,7 +111,7 @@ const projects = [
       "Nodemailer SMTP setup for mail notification",
       "Code review and complete testing",
     ],
-    image: "/bms-property-dashboard.png",
+    image: "/sl.png",
     category: "fullstack",
     links: {
       demo: "https://booking.sjktsaraswathy.com/",
@@ -113,6 +119,7 @@ const projects = [
     },
   },
   {
+    id: 6,
     title: "Locum Zone",
     period: "July 2022 - November 2022",
     description:
@@ -134,18 +141,16 @@ const projects = [
     },
   },
   {
+    id: 7,
     title: "Tailwood UI",
     period: "October 2021 - January 2022",
     description:
       "Tailwood UI is a free Tailwind CSS component library that provides reusable styled components in HTML and Tailwind CSS.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Express", "Storybook"],
+    technologies: ["Next.js", "Storybook"],
     features: [
       "Created all UI components with React for all types of form inputs",
       "Storybook implementation for individual UI components",
-      "Created all API's for projects",
-      "Node mailer SMTP setup for mail notification",
-      "Twilio SMS API setup for OTP verification",
-      "Implemented Stripe gateway for payments",
+      "Code review and complete testing",
     ],
     image: "/tailwood.png",
     category: "frontend",
@@ -155,6 +160,7 @@ const projects = [
     },
   },
   {
+    id: 8,
     title: "Dev converter",
     period: "July 2021 - August 2021",
     description:
@@ -183,10 +189,16 @@ export default function Projects() {
     triggerOnce: true,
     threshold: 0.1,
   })
-
+  const [slice, setSlice] = useState<{ id: null | number, length: null | number }>({
+    id: null,
+    length: null
+  })
   const [filter, setFilter] = useState("all")
 
   const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.category === filter)
+
+
+
 
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -265,83 +277,95 @@ export default function Projects() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {filteredProjects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <div className="p-6">
-                      <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
-                      <div className="flex items-center text-gray-300 mb-2">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        <span className="text-sm">{project.period}</span>
+            {filteredProjects.map((project, index) => {
+              const isExpanded = slice.id === project.id ? slice.length : 3
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                  className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                      <div className="p-6">
+                        <h3 className="text-2xl font-bold text-white mb-1">{project.title}</h3>
+                        <div className="flex items-center text-gray-300 mb-2">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          <span className="text-sm">{project.period}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="p-6">
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+                  <div className="p-6">
+                    <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
 
-                  <div className="mb-4">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Technologies Used:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="mb-4">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Technologies Used:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
-                    <ul className="space-y-1 text-gray-700 dark:text-gray-300">
-                      {project.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <div className="mt-1.5 mr-2 w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                      {project.features.length > 3 && (
-                        <li className="text-purple-600 dark:text-purple-400 text-sm mt-1">
-                          + {project.features.length - 3} more features
-                        </li>
-                      )}
-                    </ul>
-                  </div>
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
+                      <ul className="space-y-1 text-gray-700 dark:text-gray-300">
+                        {project.features.slice(0, isExpanded ?? 3).map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start">
+                            <div className="mt-1.5 mr-2 w-2 h-2 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                        <div onClick={() => {
+                          if (slice.id === project.id) {
+                            setSlice({ id: null, length: null })
+                          } else
+                            setSlice({ id: project.id, length: project.features.length })
+                        }} className="cursor-pointer">
+                          {project.features.length > 3 && (
+                            <li className="text-purple-600 dark:text-purple-400 text-sm mt-1">
+                              {slice.id === project.id ? "Hide" : `${project.features.length - 3} + more`} features
+                            </li>
+                          )}
+                        </div>
+                      </ul>
+                    </div>
 
-                  <div className="flex gap-3">
-                    <Link href={project.links.demo} target="_blank" rel="noopener noreferrer">
-                      <Button className="gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
-                        <ExternalLink size={16} />
-                        Live Demo
-                      </Button>
-                    </Link>
-                    <Link href={project?.links?.github || ""} target="_blank" rel="noopener noreferrer">
+                    <div className="flex gap-3">
+                      <Link href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                        <Button className="gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
+                          <ExternalLink size={16} />
+                          Live Demo
+                        </Button>
+                      </Link>
+                      {/* <Link href={project?.links?.github || ""} target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" className="gap-2">
                         <Github size={16} />
                         Code
                       </Button>
-                    </Link>
+                    </Link> */}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              )
+            }
+
+            )}
           </div>
         </motion.div>
       </div>

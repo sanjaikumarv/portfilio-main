@@ -39,7 +39,7 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="#home" className="text-xl font-bold text-gray-900 dark:text-white">
+        <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
           <span className="text-purple-600">Sanjai</span>kumar V
         </Link>
 

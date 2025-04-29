@@ -130,8 +130,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Working Hours</h4>
-                    <p className="text-gray-700 dark:text-gray-300">Monday - Friday: 9 AM - 6 PM</p>
-                    <p className="text-gray-700 dark:text-gray-300">Weekend: Available for urgent matters</p>
+                    <p className="text-gray-700 dark:text-gray-300">Monday - Saturday: 9 AM - 6 PM</p>
+                    <p className="text-gray-700 dark:text-gray-300">Weekend: Available</p>
                   </div>
                 </div>
               </div>
