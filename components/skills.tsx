@@ -33,6 +33,8 @@ const skillCategories = [
       { name: "MongoDB", level: 85 },
       { name: "Mongoose ORM", level: 85 },
       { name: "PostgreSQL", level: 50 },
+      { name: "Redis", level: 50 },
+
     ],
   },
   {
@@ -42,6 +44,7 @@ const skillCategories = [
       { name: "GitHub Actions", level: 50 },
       { name: "AWS", level: 50 },
       { name: "Docker", level: 50 },
+      { name: "Nginx", level: 50 },
     ],
   },
   {
@@ -58,8 +61,8 @@ const skillCategories = [
     title: "Languages",
     icon: <Code className="h-6 w-6" />,
     skills: [
-      { name: "JavaScript", level: 90 },
-      { name: "TypeScript", level: 85 },
+      { name: "JavaScript", level: 80 },
+      { name: "TypeScript", level: 80 },
     ],
   },
   // {
