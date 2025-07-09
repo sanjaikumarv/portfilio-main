@@ -119,7 +119,7 @@ export default function Footer() {
                 </li>
                 <li className="text-gray-400">
                   <span className="block">Location:</span>
-                  <span className="hover:text-white transition-colors">Tamil Nadu, India</span>
+                  <span className="hover:text-white transition-colors">Coimbatore, Tamil Nadu, India</span>
                 </li>
               </ul>
             </div>
@@ -127,7 +127,6 @@ export default function Footer() {
 
           <div className="mt-12 pt-8 border-t border-gray-800 text-center">
             <p className="mb-4">&copy; {new Date().getFullYear()} Sanjaikumar Veerasamy. All rights reserved.</p>
-            <p className="text-gray-400 text-sm">Designed and built with Next.js and Tailwind CSS</p>
           </div>
         </motion.div>
       </div>

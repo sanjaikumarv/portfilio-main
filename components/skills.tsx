@@ -31,7 +31,7 @@ const skillCategories = [
     icon: <Database className="h-6 w-6" />,
     skills: [
       { name: "MongoDB", level: 85 },
-      { name: "Mongoose ORM", level: 85 },
+      { name: "Mongoose ODM", level: 85 },
       { name: "PostgreSQL", level: 50 },
       { name: "Redis", level: 50 },
 

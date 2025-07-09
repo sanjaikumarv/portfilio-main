@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  portfolio-main:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: portfolio-main:latest
+    ports:
+      - "4000:3000"
+    environment:
+      - HOST=0.0.0.0

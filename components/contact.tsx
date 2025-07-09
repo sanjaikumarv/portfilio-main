@@ -120,7 +120,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">Location</h4>
-                    <p className="text-gray-700 dark:text-gray-300">Tamil Nadu, India</p>
+                    <p className="text-gray-700 dark:text-gray-300">Coimbatore, Tamil Nadu, India</p>
                   </div>
                 </div>
 
