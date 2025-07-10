@@ -1,6 +1,6 @@
 import About from "@/components/about";
 import BackgroundAnimation from "@/components/background-animation";
-import Certificates from "@/components/certificates";
+import Certificates from "@/components/my-certificates";
 import Contact from "@/components/contact";
 import Education from "@/components/education";
 import Experience from "@/components/experience";
