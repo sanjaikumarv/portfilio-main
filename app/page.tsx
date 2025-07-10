@@ -1,6 +1,6 @@
 import About from "@/components/About"
 import BackgroundAnimation from "@/components/BackgroundAnimation"
-import Certificates from "@/components/Cerfificates"
+import Certificates from "@/components/Certificates"
 import Contact from "@/components/Contact"
 import Education from "@/components/Education"
 import Experience from "@/components/Experience"
