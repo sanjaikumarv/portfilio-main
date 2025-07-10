@@ -1,14 +1,14 @@
-import About from "@/components/About";
-import BackgroundAnimation from "@/components/BackgroundAnimation";
-import Certificates from "@/components/Certificates";
-import Contact from "@/components/Contact";
-import Education from "@/components/Education";
-import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import About from "@/components/about";
+import BackgroundAnimation from "@/components/background-animation";
+import Certificates from "@/components/certificates";
+import Contact from "@/components/contact";
+import Education from "@/components/education";
+import Experience from "@/components/experience";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
 
 export default function Home() {
   return (
