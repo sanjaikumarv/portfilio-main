@@ -10,7 +10,7 @@ const skillCategories = [
     icon: <Layout className="h-6 w-6" />,
     skills: [
       { name: "React JS", level: 90 },
-      { name: "React Native", level: 30 },
+      { name: "React Native", level: 80 },
       { name: "Next JS", level: 85 },
       { name: "HTML/CSS", level: 95 },
       { name: "SCSS / Tailwind", level: 90 },
