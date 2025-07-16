@@ -32,7 +32,7 @@ const projects = [
     image: "/udc.png",
     category: "fullstack",
     links: {
-      demo: "https://usedcomputer.com.my",
+      demo: "https://usedcomp.plenitudeit.com.my/",
       Github: "https://github.com/Santheepkumar/udc-frontend.git"
     },
   },
