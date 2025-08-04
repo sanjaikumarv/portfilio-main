@@ -11,6 +11,24 @@ import Link from "next/link"
 const projects = [
   {
     id: 1,
+    title: "Software School Tamil",
+    period: "Auguest 2025",
+    description:
+      "Built a learning platform to educate and support aspiring software developers through practical, real-world content",
+    technologies: ["Next.js", "Supabase"],
+    features: [
+      "Implemented subabase Google/Github Oauth login and register",
+      "Enhanced login and register ui's",
+    ],
+    image: "/sst.png",
+    category: "fullstack",
+    links: {
+      demo: "https://www.softwareschooltamil.us/",
+      Github: "https://github.com/Santheepkumar/software-school-tamil.git"
+    },
+  },
+  {
+    id: 2,
     title: "Used Computer (UDC) Rewamp",
     period: "March 2025 - Till Now",
     description:
@@ -37,7 +55,7 @@ const projects = [
     },
   },
   {
-    id: 2,
+    id: 3,
     title: "Mobilab2u",
     period: "July 2024 - Till Now",
     description:
@@ -62,7 +80,7 @@ const projects = [
     },
   },
   {
-    id: 3,
+    id: 4,
     title: "NCER web (NEST)",
     period: "September 2023 - April 2025",
     description:
@@ -85,7 +103,7 @@ const projects = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "Awan BMS",
     period: "November 2022 - May 2023",
     description:
@@ -108,7 +126,7 @@ const projects = [
     },
   },
   {
-    id: 5,
+    id: 6,
     title: "Slot booking",
     period: "November 2022 - July 2023",
     description: "Slot booking is a booking- based application.People can book the multipurpose hall for their events or ceremonies, etc.The hall details and services are shown on the booking page.",
@@ -129,7 +147,7 @@ const projects = [
     },
   },
   {
-    id: 6,
+    id: 7,
     title: "Locum Zone",
     period: "July 2022 - November 2022",
     description:
@@ -153,7 +171,7 @@ const projects = [
     },
   },
   {
-    id: 7,
+    id: 8,
     title: "Tailwood UI",
     period: "October 2021 - January 2022",
     description:
@@ -172,7 +190,7 @@ const projects = [
     },
   },
   {
-    id: 8,
+    id: 9,
     title: "Dev converter",
     period: "July 2021 - August 2021",
     description:
