@@ -151,7 +151,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <Link href="https://drive.google.com/file/d/1H7AO04KAyMKbhNNmC2HiXA0LaPiiyAWt/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              <Link href="https://drive.google.com/file/d/1X0kq-AGdYxYDKMN9nQ2cHwHtMDJTXb1X/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                 <Button className="gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full transition-all duration-300 hover:scale-105">
                   <Download size={18} />
                   Download Resume
