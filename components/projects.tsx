@@ -17,8 +17,8 @@ const projects = [
       "Built a learning platform to educate and support aspiring software developers through practical, real-world content",
     technologies: ["Next.js", "Supabase"],
     features: [
-      "Implemented subabase Google/Github Oauth login and register",
-      "Enhanced login and register ui's",
+      "Enhanced complete authentication flow with Supabase",
+      "Enhanced login and register UI's",
     ],
     image: "/sst.png",
     category: "fullstack",
