@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { Code, Database, Server, Layout, Globe, Terminal, Cloud, Cpu } from "lucide-react"
+import { Code, Database, Server, Layout, Terminal, Cloud } from "lucide-react"
 
 const skillCategories = [
   {
@@ -21,9 +21,9 @@ const skillCategories = [
     title: "Backend",
     icon: <Server className="h-6 w-6" />,
     skills: [
-      { name: "Node JS", level: 85 },
-      { name: "Nest JS", level: 80 },
-      { name: "Express JS", level: 90 },
+      { name: "Node.js", level: 85 },
+      { name: "Nest.js", level: 80 },
+      { name: "Express.js", level: 90 },
       { name: "Fastify", level: 75 },
     ],
   },
@@ -35,7 +35,6 @@ const skillCategories = [
       { name: "Mongoose ODM", level: 85 },
       { name: "PostgreSQL", level: 50 },
       { name: "Redis", level: 50 },
-
     ],
   },
   {

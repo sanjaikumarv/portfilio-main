@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import Image from "next/image"
-import { ExternalLink, Github, Calendar } from "lucide-react"
+import { ExternalLink, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -15,7 +15,7 @@ const projects = [
     period: "Auguest 2025",
     description:
       "Built a learning platform to educate and support aspiring software developers through practical, real-world content",
-    technologies: ["Next.js", "Supabase", "GitHub", "Vercel","Tailwind CSS"],
+    technologies: ["Next.js", "Supabase", "GitHub", "Vercel", "Tailwind CSS"],
     features: [
       "Enhanced complete authentication flow with Supabase",
       "Enhanced login and register UI's",
@@ -33,7 +33,7 @@ const projects = [
     period: "March 2025 - Till Now",
     description:
       "Used Computer is a Malaysian digital platform offering two core services: Smart Disposal and Smart Trading. Smart Disposal: Users can sell their e-waste to local collection centers for eco-friendly recycling and payment. Smart Trading: buy and sell electronic products with price negotiation, making tech exchange sustainable and affordable.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Nest JS"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Nest.jS", 'AWS', "GitHub Actions", "Vercel", "Tailwind CSS", "BillPlz"],
     features: [
       "Smart disposal flow Major bug fixes and performance improvements",
       "Implemented Smart Trading feature for tech exchange by enabling users to buy/sell secondhand or Brand new products with price negotiation features.",
@@ -60,7 +60,7 @@ const projects = [
     period: "July 2024 - Till Now",
     description:
       "Mobilab2U is an on-demand healthcare platform that connects patients with medical professionals and diagnostic partners. It allows users to book time-sensitive medical tests from the comfort of their homes, eliminating the need to visit hospitals, labs, or clinics. Patients can also schedule doctor consultations through the portal and receive digital prescriptions, making healthcare more accessible and convenient.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Fastify JS", "Redis"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Fastify", "Redis", 'AWS', "GitHub Actions", "Docker", "Vercel", "Microservices", "Stripe"],
     features: [
       "Created all UI components with React for all types of form inputs",
       "Storybook implementation for individual UI components",
@@ -85,7 +85,7 @@ const projects = [
     period: "September 2023 - April 2025",
     description:
       "Ncer Web is a Malaysian business management platform that is being handled by the government.This platform helps the government verify and validate business peoples applications and assists them by providing business ideas.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Express JS"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Express JS", 'AWS', "GitHub Actions", "Vercel", "Tailwind CSS"],
     features: [
       "Created all UI components with React for all types of form inputs",
       "Storybook implementation for individual UI components",
@@ -108,7 +108,7 @@ const projects = [
     period: "November 2022 - May 2023",
     description:
       "Awan BMS was an automated building management application. It created building blocks and assigned each house to an individual owner. The application automatically sent payment links and collected the owners' monthly rent.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Express", "Storybook"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Express", "Storybook", 'AWS', "GitHub Actions", "Vercel", "Tailwind CSS", "Stripe"],
     features: [
       "Created all UI components with React for all types of form inputs",
       "Storybook implementation for individual UI components",
@@ -130,7 +130,7 @@ const projects = [
     title: "Slot booking",
     period: "November 2022 - July 2023",
     description: "Slot booking is a booking- based application.People can book the multipurpose hall for their events or ceremonies, etc.The hall details and services are shown on the booking page.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Express"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Express", 'AWS', "GitHub Actions", "Vercel", "Tailwind CSS"],
     features: [
       "Created all UI components with React for all types of form inputs",
       "Storybook implementation for individual UI components",
@@ -152,7 +152,7 @@ const projects = [
     period: "July 2022 - November 2022",
     description:
       "Locum Zone was a Malaysian business and doctor employment-focused platform. The platform is used for Malaysian hospitals or medical centers to create their profiles and post their available doctor jobs. Doctors can apply to these jobs.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Express", "Storybook"],
+    technologies: ["Next.js", "Node.js", "MongoDB", "Express", "Storybook", "Vercel", "Tailwind CSS", "Stripe"],
     features: [
       "Created all UI components with React for all types of form inputs",
       "Storybook implementation for individual UI components",
@@ -176,7 +176,7 @@ const projects = [
     period: "October 2021 - January 2022",
     description:
       "Tailwood UI is a free Tailwind CSS component library that provides reusable styled components in HTML and Tailwind CSS.",
-    technologies: ["Next.js", "Storybook"],
+    technologies: ["Next.js", "Storybook", "Vercel", "Tailwind CSS"],
     features: [
       "Created all UI components with React for all types of form inputs",
       "Storybook implementation for individual UI components",
@@ -195,7 +195,7 @@ const projects = [
     period: "July 2021 - August 2021",
     description:
       "Dev Converter is made for developers.The app provides features like transforming word collections from one case to another and converting JSON to CSV.",
-    technologies: ["Next.js", "Storybook"],
+    technologies: ["Next.js", "Storybook", "Vercel", "Tailwind CSS"],
     features: [
       "Created all UI components with React for all types of form inputs",
       "Storybook implementation for individual UI components",
