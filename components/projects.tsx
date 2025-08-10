@@ -15,7 +15,7 @@ const projects = [
     period: "Auguest 2025",
     description:
       "Built a learning platform to educate and support aspiring software developers through practical, real-world content",
-    technologies: ["Next.js", "Supabase"],
+    technologies: ["Next.js", "Supabase", "GitHub", "Vercel","Tailwind CSS"],
     features: [
       "Enhanced complete authentication flow with Supabase",
       "Enhanced login and register UI's",
