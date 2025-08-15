@@ -9,6 +9,7 @@ import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
+import NpmPackages from "@/components/npm-packages";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <Certificates />
+      <NpmPackages />
       <Education />
       <Contact />
       <Footer />

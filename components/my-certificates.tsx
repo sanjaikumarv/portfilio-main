@@ -102,10 +102,9 @@ export default function Certificates() {
         triggerOnce: true,
         threshold: 0.1,
     })
-
     return (
         <section id="certificates" className="py-20">
-            <div className="container mx-auto px-4">
+            <div className="mx-auto px-4">
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0 }}
@@ -126,12 +125,7 @@ export default function Certificates() {
                                 Certifications
                             </span>
                         </motion.h2>
-                        <motion.div
-                            initial={{ opacity: 0, width: 0 }}
-                            animate={inView ? { opacity: 1, width: "100px" } : { opacity: 0, width: 0 }}
-                            transition={{ duration: 0.5, delay: 0.3 }}
-                            className="h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mt-4"
-                        ></motion.div>
+
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -271,6 +265,7 @@ export default function Certificates() {
                     </motion.div>
                 </motion.div>
             </div>
+
         </section>
     )
 }

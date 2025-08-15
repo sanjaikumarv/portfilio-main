@@ -16,6 +16,7 @@ const navItems = [
     { name: "certificates", href: "#certificates" },
     { name: "Education", href: "#education" },
     { name: "Contact", href: "#contact" },
+    { name: "NPM Packages", href: "#npm-packages" },
 ]
 
 export default function Header() {
