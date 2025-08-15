@@ -146,7 +146,7 @@ export default function NpmPackages() {
                             transition={{ duration: 0.5, delay: 0.1 }}
                             className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white inline-block"
                         >
-                            My{" "}
+                            Published{" "}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
                                 NPM Packages
                             </span>
