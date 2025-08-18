@@ -82,6 +82,17 @@ const certificates: Certificate[] = [
         description:
             "Demonstrated strong analytical thinking and algorithm design skills through complex problem-solving challenges.",
     },
+    {
+        id: "6",
+        title: "Frontend Developer (React)",
+        issuer: "HackerRank",
+        date: "August 2025",
+        level: "Intermediate",
+        skills: ["Algorithms", "Data Structures", "Problem Solving", "Optimization"],
+        credentialUrl: "https://www.hackerrank.com/certificates/iframe/48b7b1e0129c",
+        description:
+            "Demonstrated strong analytical thinking and algorithm design skills through complex problem-solving challenges.",
+    },
 ]
 
 const getLevelColor = (level: string) => {
