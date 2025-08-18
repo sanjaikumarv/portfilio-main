@@ -93,6 +93,17 @@ const certificates: Certificate[] = [
         description:
             "Demonstrated strong analytical thinking and algorithm design skills through complex problem-solving challenges.",
     },
+    {
+        id: "6",
+        title: "Node JS (Basic)",
+        issuer: "HackerRank",
+        date: "August 2025",
+        level: "Intermediate",
+        skills: ["Algorithms", "Data Structures", "Problem Solving", "Optimization"],
+        credentialUrl: "https://www.hackerrank.com/certificates/iframe/93c253b4ec2d",
+        description:
+            "Demonstrated strong analytical thinking and algorithm design skills through complex problem-solving challenges.",
+    },
 ]
 
 const getLevelColor = (level: string) => {
