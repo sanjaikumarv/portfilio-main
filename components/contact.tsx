@@ -44,7 +44,7 @@ export default function Contact() {
     }
 
     return (
-        <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+        <section id="contact" className="py-20 relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-purple-100 dark:bg-purple-900/20 rounded-bl-full opacity-30"></div>
             <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-pink-100 dark:bg-pink-900/20 rounded-tr-full opacity-30"></div>

@@ -9,7 +9,7 @@ const experiences = [
         title: "Full Stack Developer",
         company: "Plenitude IT",
         location: "Tamil Nadu, India",
-        period: "July 2022 - Present",
+        period: "July 2022 - August 2025",
         description:
             "Working as a Full Stack Developer, building and maintaining web applications using modern technologies like React, Next.js, Node.js, and MongoDB. Responsible for developing both frontend and backend components, implementing new features, and ensuring optimal performance.",
         achievements: [
