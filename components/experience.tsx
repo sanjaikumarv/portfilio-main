@@ -11,7 +11,7 @@ const experiences = [
         location: "Tamil Nadu, India",
         period: "July 2022 - August 2025",
         description:
-            "Working as a Full Stack Developer, building and maintaining web applications using modern technologies like React, Next.js, Node.js, and MongoDB. Responsible for developing both frontend and backend components, implementing new features, and ensuring optimal performance.",
+            "Worked as a Full Stack Developer, building and maintaining web applications using modern technologies like React, Next.js, Node.js, and MongoDB. Responsible for developing both frontend and backend components, implementing new features, and ensuring optimal performance.",
         achievements: [
             "Developed and maintained multiple client projects with high satisfaction rates",
             "Optimized application performance resulting in 40% faster load times",
