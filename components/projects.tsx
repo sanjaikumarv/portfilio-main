@@ -7,103 +7,88 @@ import Image from "next/image"
 import { ExternalLink, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-
 const projects = [
   {
     id: 1,
-    title: "Software School Tamil",
-    period: "Auguest 2025",
+    title: "Dev converter",
+    period: "July 2021 - August 2021",
     description:
-      "Built a learning platform to educate and support aspiring software developers through practical, real-world content",
-    technologies: ["Next.js", "Supabase", "GitHub", "Vercel", "Tailwind CSS"],
+      "Dev Converter is made for developers.The app provides features like transforming word collections from one case to another and converting JSON to CSV.",
+    technologies: ["Next.js", "Storybook", "Tailwind CSS", "GitHub", "Firebase", "Vercel"],
     features: [
-      "Enhanced complete authentication flow with Supabase",
-      "Enhanced login and register UI's",
+      "Created all UI components with React for all types of form inputs",
+      "Storybook implementation for individual UI components",
+      "Firebase setup for authentication and database",
     ],
-    image: "/sst.png",
-    category: "fullstack",
+    image: "/devc.png",
+    category: "frontend",
     links: {
-      demo: "https://www.softwareschooltamil.us/",
-      Github: "https://github.com/Santheepkumar/software-school-tamil.git"
+      demo: "https://devconverter.vercel.app",
+      github: "https://github.com/sanjaikumarv/locum-zone",
     },
   },
   {
     id: 2,
-    title: "Used Computer (UDC) Rewamp",
-    period: "March 2025 - Till Now",
+    title: "Tailwood UI",
+    period: "October 2021 - January 2022",
     description:
-      "Used Computer is a Malaysian digital platform offering two core services: Smart Disposal and Smart Trading. Smart Disposal: Users can sell their e-waste to local collection centers for eco-friendly recycling and payment. Smart Trading: buy and sell electronic products with price negotiation, making tech exchange sustainable and affordable.",
-    technologies: ["Next.js", "TailwindCSS", "MongoDB", "Nest.js", 'AWS', "GitHub", "GitHub Actions", "Vercel", "BillPlz"],
+      "Tailwood UI is a free Tailwind CSS component library that provides reusable styled components in HTML and Tailwind CSS.",
+    technologies: ["Next.js", "Tailwind CSS", "Storybook", "Vercel", "GitHub"],
     features: [
-      "Fixed major bugs and improved performance in the Smart Disposal flow.",
-      "Built end-to-end Smart Trading feature for the tech exchange platform, allowing users to buy and sell second-hand or brand-new products with price negotiation.",
-      "End-to-end authentication and authorization for the Smart Trading feature.",
-      "Improved product listings with categories, advanced filters (price, brand, condition), and full-text search.",
-      "Added a price negotiation system for flexible transactions between buyers and sellers.",
-      "NodeMailer API for email notifications.",
-      "Twilio SMS API for OTP verification.",
-      "Enhanced Billplz payment gateway for smoother transactions.",
-      "Project planning and architecture.",
-      "Managed client communication and requirements.",
-      "Reviewed code and completed full testing.",
-      "Configured GitHub Actions and CI/CD pipelines for automated deployments."
+      "Created all UI components with React for all types of form inputs",
+      "Storybook implementation for individual UI components",
+      "Code review and complete testing",
     ],
-
-    image: "/udc.png",
-    category: "fullstack",
+    image: "/tailwood.png",
+    category: "frontend",
     links: {
-      demo: "https://usedcomp.plenitudeit.com.my/",
-      Github: "https://github.com/Santheepkumar/udc-frontend.git"
+      demo: "https://tailwoodui.vercel.app/",
+      github: "https://github.com/Santheepkumar/tailwood.git",
     },
   },
   {
     id: 3,
-    title: "Mobilab2u",
-    period: "July 2024 - Till Now",
+    title: "Locum Zone",
+    period: "July 2022 - November 2022",
     description:
-      "Mobilab2U is an on-demand healthcare platform that connects patients with medical professionals and diagnostic partners. It allows users to book time-sensitive medical tests from the comfort of their homes, eliminating the need to visit hospitals, labs, or clinics. Patients can also schedule doctor consultations through the portal and receive digital prescriptions, making healthcare more accessible and convenient.",
-    technologies: ["Next.js", "TailwindCSS", "Node.js", "Fastify", "MongoDB", "Redis", 'AWS', "GitHub Actions", "Docker", "Vercel", "Microservices", "Stripe", "GitHub"],
+      "Locum Zone was a Malaysian business and doctor employment-focused platform. The platform is used for Malaysian hospitals or medical centers to create their profiles and post their available doctor jobs. Doctors can apply to these jobs.",
+    technologies: ["Next.js", "Tailwind CSS", "Storybook", "Node.js", "MongoDB", "Express", "Vercel", "Stripe", "GitHub"],
     features: [
-      "End-to-end authentication and authorization setup",
-      "Context API setup for global state management",
-      "End-to-end backend API's development for project flow",
+      "Created all UI components with React for all types of form inputs",
+      "Storybook implementation for individual UI components",
+      "End-to-end backend API's for project flow",
       "NodeMailer setup for email notification",
-      "Twilio SMS / Whatsapp API setup for reminders",
-      "Stripe payment gateway setup for smoother transactions.",
-      "Queueing app implementation for timely notifications using microservices architecture",
-      "Project planning and architecture.",
+      "Twilio SMS API setup for OTP verification",
+      "Stripe payment gateway setup for smooth transactions.",
       "Managed client communication and requirements.",
       "Code review and complete testing",
     ],
-    image: "/m2u.png",
-    category: "backend",
+    image: "/lz.png",
+    category: "fullstack",
     links: {
-      demo: "https://mobilab2u.com",
-      Github: "https://github.com/Santheepkumar/mobilab2u.git"
+      demo: "https://locumzone.vercel.app/",
+      github: "https://github.com/sanjaikumarv/locum-zone",
     },
   },
   {
     id: 4,
-    title: "NCER web (NEST)",
-    period: "September 2023 - April 2025",
-    description:
-      "Ncer Web is a Malaysian business management platform that is being handled by the government.This platform helps the government verify and validate business peoples applications and assists them by providing business ideas.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Express JS", 'AWS', "GitHub Actions", "Vercel", "Tailwind CSS", "GitHub"],
+    title: "Slot booking",
+    period: "November 2022 - July 2023",
+    description: "Slot booking is a booking- based application.People can book the multipurpose hall for their events or ceremonies, etc.The hall details and services are shown on the booking page.",
+    technologies: ["Next.js", "Node.js", "MongoDB", "Express", 'AWS', "GitHub Actions", "Vercel", "Tailwind CSS", "GitHub"],
     features: [
+      "Created all UI components with React for all types of form inputs",
+      "Storybook implementation for individual UI components",
       "End-to-end authentication and authorization setup",
       "Context API setup for global state management",
-      "End-to-end backend API's development for project flow",
-      "NodeMailer setup for email notification",
-      "Project planning and architecture.",
       "Managed client communication and requirements.",
       "Code review and complete testing",
-      "Implemented Github Actions and CI/CD pipelines for deployment automation"
     ],
-    image: "/nest.png",
-    category: "backend",
+    image: "/sl.png",
+    category: "fullstack",
     links: {
-      demo: "https://nest.ncer.com.my",
-      Github: "https://github.com/sanjaikumarv/ncer-web.git"
+      demo: "https://booking.sjktsaraswathy.com/",
+      github: "https://github.com/sanjaikumarv/awan-bms",
     },
   },
   {
@@ -132,89 +117,120 @@ const projects = [
   },
   {
     id: 6,
-    title: "Slot booking",
-    period: "November 2022 - July 2023",
-    description: "Slot booking is a booking- based application.People can book the multipurpose hall for their events or ceremonies, etc.The hall details and services are shown on the booking page.",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Express", 'AWS', "GitHub Actions", "Vercel", "Tailwind CSS", "GitHub"],
+    title: "NCER web (NEST)",
+    period: "September 2023 - April 2025",
+    description:
+      "Ncer Web is a Malaysian business management platform that is being handled by the government.This platform helps the government verify and validate business peoples applications and assists them by providing business ideas.",
+    technologies: ["Next.js", "Node.js", "MongoDB", "Express JS", 'AWS', "GitHub Actions", "Vercel", "Tailwind CSS", "GitHub"],
     features: [
-      "Created all UI components with React for all types of form inputs",
-      "Storybook implementation for individual UI components",
       "End-to-end authentication and authorization setup",
       "Context API setup for global state management",
+      "End-to-end backend API's development for project flow",
+      "NodeMailer setup for email notification",
+      "Project planning and architecture.",
       "Managed client communication and requirements.",
       "Code review and complete testing",
+      "Implemented Github Actions and CI/CD pipelines for deployment automation"
     ],
-    image: "/sl.png",
-    category: "fullstack",
+    image: "/nest.png",
+    category: "backend",
     links: {
-      demo: "https://booking.sjktsaraswathy.com/",
-      github: "https://github.com/sanjaikumarv/awan-bms",
+      demo: "https://nest.ncer.com.my",
+      Github: "https://github.com/sanjaikumarv/ncer-web.git"
     },
   },
   {
     id: 7,
-    title: "Locum Zone",
-    period: "July 2022 - November 2022",
+    title: "Mobilab2u",
+    period: "July 2024 - Till Now",
     description:
-      "Locum Zone was a Malaysian business and doctor employment-focused platform. The platform is used for Malaysian hospitals or medical centers to create their profiles and post their available doctor jobs. Doctors can apply to these jobs.",
-    technologies: ["Next.js", "Tailwind CSS", "Storybook", "Node.js", "MongoDB", "Express", "Vercel", "Stripe", "GitHub"],
+      "Mobilab2U is an on-demand healthcare platform that connects patients with medical professionals and diagnostic partners. It allows users to book time-sensitive medical tests from the comfort of their homes, eliminating the need to visit hospitals, labs, or clinics. Patients can also schedule doctor consultations through the portal and receive digital prescriptions, making healthcare more accessible and convenient.",
+    technologies: ["Next.js", "TailwindCSS", "Node.js", "Fastify", "MongoDB", "Redis", 'AWS', "GitHub Actions", "Docker", "Vercel", "Microservices", "Stripe", "GitHub"],
     features: [
-      "Created all UI components with React for all types of form inputs",
-      "Storybook implementation for individual UI components",
-      "End-to-end backend API's for project flow",
+      "End-to-end authentication and authorization setup",
+      "Context API setup for global state management",
+      "End-to-end backend API's development for project flow",
       "NodeMailer setup for email notification",
-      "Twilio SMS API setup for OTP verification",
-      "Stripe payment gateway setup for smooth transactions.",
+      "Twilio SMS / Whatsapp API setup for reminders",
+      "Stripe payment gateway setup for smoother transactions.",
+      "Queueing app implementation for timely notifications using microservices architecture",
+      "Project planning and architecture.",
       "Managed client communication and requirements.",
       "Code review and complete testing",
     ],
-    image: "/lz.png",
-    category: "fullstack",
+    image: "/m2u.png",
+    category: "backend",
     links: {
-      demo: "https://locumzone.vercel.app/",
-      github: "https://github.com/sanjaikumarv/locum-zone",
+      demo: "https://mobilab2u.com",
+      Github: "https://github.com/Santheepkumar/mobilab2u.git"
     },
   },
   {
     id: 8,
-    title: "Tailwood UI",
-    period: "October 2021 - January 2022",
+    title: "Used Computer (UDC) Rewamp",
+    period: "March 2025 - Till Now",
     description:
-      "Tailwood UI is a free Tailwind CSS component library that provides reusable styled components in HTML and Tailwind CSS.",
-    technologies: ["Next.js", "Tailwind CSS", "Storybook", "Vercel", "GitHub"],
+      "Used Computer is a Malaysian digital platform offering two core services: Smart Disposal and Smart Trading. Smart Disposal: Users can sell their e-waste to local collection centers for eco-friendly recycling and payment. Smart Trading: buy and sell electronic products with price negotiation, making tech exchange sustainable and affordable.",
+    technologies: ["Next.js", "TailwindCSS", "MongoDB", "Nest.js", 'AWS', "GitHub", "GitHub Actions", "Vercel", "BillPlz"],
     features: [
-      "Created all UI components with React for all types of form inputs",
-      "Storybook implementation for individual UI components",
-      "Code review and complete testing",
+      "Fixed major bugs and improved performance in the Smart Disposal flow.",
+      "Built end-to-end Smart Trading feature for the tech exchange platform, allowing users to buy and sell second-hand or brand-new products with price negotiation.",
+      "End-to-end authentication and authorization for the Smart Trading feature.",
+      "Improved product listings with categories, advanced filters (price, brand, condition), and full-text search.",
+      "Added a price negotiation system for flexible transactions between buyers and sellers.",
+      "NodeMailer API for email notifications.",
+      "Twilio SMS API for OTP verification.",
+      "Enhanced Billplz payment gateway for smoother transactions.",
+      "Project planning and architecture.",
+      "Managed client communication and requirements.",
+      "Reviewed code and completed full testing.",
+      "Configured GitHub Actions and CI/CD pipelines for automated deployments."
     ],
-    image: "/tailwood.png",
-    category: "frontend",
+    image: "/udc.png",
+    category: "fullstack",
     links: {
-      demo: "https://tailwoodui.vercel.app/",
-      github: "https://github.com/Santheepkumar/tailwood.git",
+      demo: "https://usedcomp.plenitudeit.com.my/",
+      Github: "https://github.com/Santheepkumar/udc-frontend.git"
     },
   },
   {
     id: 9,
-    title: "Dev converter",
-    period: "July 2021 - August 2021",
+    title: "Software School Tamil",
+    period: "Auguest 2025",
     description:
-      "Dev Converter is made for developers.The app provides features like transforming word collections from one case to another and converting JSON to CSV.",
-    technologies: ["Next.js", "Storybook", "Tailwind CSS", "GitHub", "Firebase", "Vercel"],
+      "Built a learning platform to educate and support aspiring software developers through practical, real-world content",
+    technologies: ["Next.js", "Supabase", "GitHub", "Vercel", "Tailwind CSS"],
     features: [
-      "Created all UI components with React for all types of form inputs",
-      "Storybook implementation for individual UI components",
-      "Firebase setup for authentication and database",
+      "Enhanced complete authentication flow with Supabase",
+      "Enhanced login and register UI's",
     ],
-    image: "/devc.png",
-    category: "frontend",
+    image: "/sst.png",
+    category: "fullstack",
     links: {
-      demo: "https://devconverter.vercel.app",
-      github: "https://github.com/sanjaikumarv/locum-zone",
+      demo: "https://www.softwareschooltamil.us/",
+      Github: "https://github.com/Santheepkumar/software-school-tamil.git"
     },
   },
-
+  {
+    id: 10,
+    title: "Portfolio Website (Kumaresan)",
+    period: "Auguest 2025",
+    description:
+      "Build a portfolio web site for UI/UX developer",
+    technologies: ["Next.js", "GitHub", "Vercel", "Tailwind CSS"],
+    features: [
+      "Developed all ui sections",
+      "web site planning",
+    ],
+    image: "/kumaresan.png",
+    category: "frontend",
+    links: {
+      demo: "https://kumaresan.vercel.app/",
+      Github: "https://github.com/sanjaikumarv/kumaresan-portfolio"
+    },
+  }
 ]
+
 
 export default function Projects() {
   const [ref, inView] = useInView({
@@ -309,7 +325,7 @@ export default function Projects() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {filteredProjects.map((project, index) => {
+            {filteredProjects.reverse().map((project, index) => {
               const isExpanded = slice.id === project.id ? slice.length : 3
               return (
                 <motion.div

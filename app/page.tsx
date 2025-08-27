@@ -8,8 +8,9 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Projects from "@/components/projects";
-import Skills from "@/components/skills";
+
 import NpmPackages from "@/components/npm-packages";
+import Skills from "@/components/skills";
 
 export default function Home() {
   return (
