@@ -3,38 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Calendar, MapPin, Briefcase } from "lucide-react"
-
-const experiences = [
-    {
-        title: "Full Stack Developer",
-        company: "Plenitude IT",
-        location: "Tamil Nadu, India",
-        period: "July 2022 - August 2025",
-        description:
-            "Worked as a Full Stack Developer, building and maintaining web applications using modern technologies like React, Next.js, Node.js, and MongoDB. Responsible for developing both frontend and backend components, implementing new features, and ensuring optimal performance.",
-        achievements: [
-            "Developed and maintained multiple client projects with high satisfaction rates",
-            "Optimized application performance resulting in 40% faster load times",
-            "Delived projects within deadlines, ensuring timely releases",
-            "Collaborated with cross-functional teams to define, design, and ship new features",
-            "Implemented best practices in code quality and testing, reducing bugs by 30%",
-        ],
-    },
-    {
-        title: "Freelancer",
-        company: "Self-employed",
-        location: "Remote",
-        period: "July 2021 - July 2022",
-        description:
-            "Worked on 2+ projects, developing websites and web applications for own usage. Managed the entire development lifecycle from requirement gathering to deployment and maintenance.",
-        achievements: [
-            "Successfully delivered 2+ projects for own skill development and usage",
-            "Built responsive and accessible web applications",
-            "Implemented SEO best practices resulting in improved search rankings",
-        ],
-    },
-]
-
+import experiences from '@/components/datas/experience.json'
 export default function Experience() {
     const [ref, inView] = useInView({
         triggerOnce: true,

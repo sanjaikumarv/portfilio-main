@@ -3,18 +3,7 @@
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { GraduationCap, BookOpen, Calendar, Award } from "lucide-react"
-
-const education = {
-    degree: "Bachelor of Computer Applications (B.C.A)",
-    institution: "Dr SNS Rajalakshmi College of Arts and Science",
-    period: "2019 - 2022",
-    description:
-        "Completed Bachelor of Computer Applications at Dr SNS Rajalakshmi College of Arts and Science with CGPA 6.5",
-    achievements: [
-        "Participated in college-level coding competitions",
-        "Developed a stock market forcasting as final year project",
-    ],
-}
+import education from '@/components/datas/education.json'
 
 const courses = [
     {
