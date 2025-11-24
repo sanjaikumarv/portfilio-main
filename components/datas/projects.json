@@ -286,5 +286,50 @@
       "demo": "https://kumaresan.vercel.app/",
       "Github": "https://github.com/sanjaikumarv/kumaresan-portfolio"
     }
+  },
+  {
+    "id": 11,
+    "title": "Sync Client",
+    "period": "September 2025 - November 2025",
+    "description": "The Sync Client is a cross-platform desktop application designed to automate the process of syncing invoice-related files to ACMO’s processing server. The application continuously monitors selected folders on the user’s system and automatically uploads new or modified files in the background, eliminating the need for manual uploads and improving workflow efficiency.",
+    "technologies": [
+      "Next.js",
+      "TailwindCSS",
+      "MongoDB",
+      "Bitbucket",
+      "Electron",
+      "Node.js"
+    ],
+    "features": [
+      "Worked on a cross-platform desktop application enabling automated folder monitoring and background file upload for ACMO’s invoice processing workflow.",
+      "Implemented real-time folder watching to detect new or modified files and upload them automatically to the server.",
+      "Integrated IPC communication between Electron Main and Renderer processes to control sync actions, transfer file details, and update UI status.",
+      "Packaged, tested, and distributed the app using Electron Builder."
+    ],
+    "image": "",
+    "category": "fullstack",
+    "links": {
+      "demo": "",
+      "Github": "https://github.com/Santheepkumar/udc-frontend.git"
+    }
+  },
+  {
+    "id": 12,
+    "title": "ACMO Documentation",
+    "period": "September 2025 - November 2025",
+    "description": "The ACMO Product Documentation project involved building a structured, user-friendly documentation system to help internal teams and customers understand product features, workflows, and technical configurations. The documentation was developed using Nextra, enabling MDX-based customization, improved navigation, and enhanced readability.",
+    "technologies": ["Nextra", "Bitbucket", "MDX", "Tailwind CSS"],
+    "features": [
+      "Created and maintained documentation pages including feature guides, API usage, installation steps, FAQs, and workflow explanations.",
+      "Designed a clear side-bar navigation structure, search functionality, and content hierarchy for easy discovery and readability.",
+      "Integrated MDX components to embed UI elements, code snippets, examples, and visual diagrams directly within documentation.",
+      "Packaged, tested, and distributed the app using Electron Builder."
+    ],
+    "image": "",
+    "category": "fullstack",
+    "links": {
+      "demo": "",
+      "Github": ""
+    }
   }
 ]
