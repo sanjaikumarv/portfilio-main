@@ -57,7 +57,7 @@ const skillCategories = [
       { name: "Git", level: 90 },
       { name: "GitHub", level: 90 },
       { name: "Figma", level: 75 },
-      { name: "Subabase", level: 50 },
+      { name: "Supabase", level: 50 },
       { name: "Bitbucket", level: 50 },
       { name: "Jira", level: 50 },
     ],
