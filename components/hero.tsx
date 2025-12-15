@@ -169,7 +169,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}>
               <Link
-                href='https://drive.google.com/file/d/1iQ2upc4ydrZfy_62GJNC-vkfeCo3DOLt/view?usp=sharing'
+                href='https://drive.google.com/file/d/1QsQOHqelFrrsvKxqoi_UC7MWkowEfd3F/view?usp=sharing'
                 target='_blank'
                 rel='noopener noreferrer'>
                 <Button className='gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full transition-all duration-300 hover:scale-105'>

@@ -286,5 +286,42 @@
       "demo": "https://kumaresan.vercel.app/",
       "Github": "https://github.com/sanjaikumarv/kumaresan-portfolio"
     }
+  },
+  {
+    "id": 11,
+    "title": "Sync Client",
+    "period": "September 2025",
+    "description": "Sync Client is a desktop application that automates folder monitoring and file uploads, improving workflow efficiency for invoice processing.",
+    "technologies": [
+      "Electron",
+      "Node.js",
+      "Bitbucket",
+      "Jira",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "features": [
+      "Developed all ui sections",
+      "Component Planning",
+      "Code Review",
+      "Complete Testing"
+    ],
+    "image": "/sync-client.png",
+    "category": "fullstack"
+  },
+  {
+    "id": 12,
+    "title": "ACMO Documentation",
+    "period": "November 2025",
+    "description": "ACMO Documentation is a web site that provides comprehensive documentation for ACMO products and services.",
+    "technologies": ["Nextra.js", "Bitbucket", "Jira", "Tailwind CSS"],
+    "features": [
+      "Developed documentation for accounts payable, accounts receivable and Sync client documentation",
+      "Component Planning",
+      "Code Review",
+      "Complete Testing"
+    ],
+    "image": "/acmo.png",
+    "category": "frontend"
   }
 ]

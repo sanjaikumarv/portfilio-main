@@ -1,6 +1,17 @@
 [
   {
     "title": "Full Stack Developer",
+    "company": "ACMO Software Solutions Pvt Ltd (Australia)",
+    "location": "Tamil Nadu, India (Remote)",
+    "period": "September 2025 - November 2025",
+    "description": "Worked on 2 projects and coordinated with team members to define project scope and deliver features efficiently",
+    "achievements": [
+      "Worked on the ACMO Documentation project, creating a comprehensive documentation system using Nextra to enhance user understanding of product features and workflows.",
+      "Sync Client - Developed a cross-platform desktop application using Electron that automates folder monitoring and file uploads, improving workflow efficiency for invoice processing."
+    ]
+  },
+  {
+    "title": "Full Stack Developer",
     "company": "Plenitude IT Pvt Ltd (Malaysia)",
     "location": "Tamil Nadu, India (Remote)",
     "period": "July 2022 - August 2025",
