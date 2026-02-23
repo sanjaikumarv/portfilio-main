@@ -306,7 +306,6 @@
       "Code Review",
       "Complete Testing"
     ],
-    "image": "/sync-client.png",
     "category": "fullstack"
   },
   {
@@ -321,7 +320,6 @@
       "Code Review",
       "Complete Testing"
     ],
-    "image": "/acmo.png",
     "category": "frontend"
   }
 ]

@@ -110,7 +110,7 @@ export default function Projects() {
                 >
                   <div className="relative h-64 overflow-hidden">
                     <Image
-                      src={project.image || "/placeholder.svg"}
+                      src={project?.image || "/placeholder.svg"}
                       alt={project.title}
                       fill
                       className="object-cover transition-transform duration-500 hover:scale-105"
