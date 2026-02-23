@@ -1,4 +1,17 @@
 [
+ {
+  "title": "Full Stack Developer",
+  "company": "A2M8AI Software Solutions Pvt Ltd (India)",
+  "location": "Tamil Nadu, India (On-site)",
+  "period": "December 2025 – Present",
+  "description": "Contributing to the end-to-end development of an AI-powered Learning Management System (LMS), with major involvement in frontend architecture, UI development, and backend feature implementation.",
+  "achievements": [
+    "Led the end-to-end development of frontend UI, including component architecture planning, reusable component design, and implementation of responsive user interfaces.",
+    "Translated product requirements into scalable frontend solutions with a strong focus on performance, usability, and maintainability.",
+    "Contributed to backend development by building and integrating RESTful APIs, implementing business logic, and supporting database operations.",
+    "Collaborated with cross-functional teams to ensure seamless integration between frontend, backend, and AI-driven features."
+  ]
+}
   {
     "title": "Full Stack Developer",
     "company": "ACMO Software Solutions Pvt Ltd (Australia)",
