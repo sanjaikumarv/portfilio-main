@@ -68,6 +68,7 @@ const skillCategories = [
     skills: [
       { name: "JavaScript", level: 80 },
       { name: "TypeScript", level: 80 },
+      { name: "Python", level: 50 }
     ],
   },
   // {
