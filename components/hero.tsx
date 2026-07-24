@@ -37,7 +37,7 @@ export default function Hero() {
         if (typingRef.current) {
           typingRef.current.textContent = currentRole.substring(
             0,
-            charIndex - 1
+            charIndex - 1,
           );
         }
         charIndex--;
@@ -46,7 +46,7 @@ export default function Hero() {
         if (typingRef.current) {
           typingRef.current.textContent = currentRole.substring(
             0,
-            charIndex + 1
+            charIndex + 1,
           );
         }
         charIndex++;
@@ -112,7 +112,7 @@ export default function Hero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}>
               <p className='text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl'>
-                With 4+ years of programming experience and 3+ years of
+                With 5+ years of programming experience and 4+ years of
                 professional work, I&apos;m passionate about exploring new
                 technologies and collaborating with enthusiastic, innovative
                 people. Let&apos;s build and create together!
@@ -169,7 +169,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}>
               <Link
-                href='https://drive.google.com/file/d/1QsQOHqelFrrsvKxqoi_UC7MWkowEfd3F/view?usp=sharing'
+                href='https://drive.google.com/file/d/1axzp6aRQvHxGQAGlwBquI8nljxsp7AkM/view?usp=sharing'
                 target='_blank'
                 rel='noopener noreferrer'>
                 <Button className='gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full transition-all duration-300 hover:scale-105'>
