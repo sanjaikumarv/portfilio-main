@@ -321,5 +321,112 @@
       "Complete Testing"
     ],
     "category": "frontend"
+  },
+  {
+    "id": 13,
+    "title": "School Learning Management System",
+    "period": "December 2025 - Present",
+    "description": "An AI-powered Learning Management System designed for schools, enabling teachers to create courses, generate AI-assisted curriculum, conduct live classes, manage examinations, and provide personalized learning experiences for students.",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "WebRTC",
+      "Socket.IO",
+      "REST API",
+      "JWT Authentication",
+      "Docker",
+      "Nginx",
+      "GitHub"
+    ],
+    "features": [
+      "Frontend Architecture & Development",
+      "Authentication & Role-Based Authorization",
+      "Course & Curriculum Management",
+      "Collaborated with backend and AI teams for API and AI service integrations",
+      "AI Curriculum Generation",
+      "AI Tutor Integration",
+      "Socket.IO Integration",
+      "Live Classroom & Webinar Module",
+      "WebRTC Video Communication",
+      "Automated Attendance Tracking",
+      "AI Exam Proctoring Integration",
+      "AI Answer Evaluation Integration",
+      "Frontend Deployment"
+    ],
+    "image": "/school-lms.png",
+    "category": "frontend"
+  },
+  {
+    "id": 14,
+    "title": "College Learning Management System",
+    "period": "December 2025 - Present",
+    "description": "An AI-powered Learning Management System developed for colleges, supporting faculty and students with intelligent course management, semester-based learning, live virtual classrooms, online examinations, and AI-assisted learning.",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "WebRTC",
+      "Socket.IO",
+      "REST API",
+      "JWT Authentication",
+      "Docker",
+      "Nginx",
+      "GitHub"
+    ],
+    "features": [
+      "Frontend Architecture & Development",
+      "Authentication & Role-Based Authorization",
+      "Faculty & Student Portal",
+      "Course & Semester Management",
+      "Collaborated with backend and AI teams for API and AI service integrations",
+      "AI Curriculum Generation",
+      "AI Tutor Integration",
+      "Socket.IO Integration",
+      "Live Webinar & Virtual Classroom",
+      "WebRTC Video Communication",
+      "AI Exam Proctoring Integration",
+      "AI Answer Evaluation Integration",
+      "Frontend Deployment"
+    ],
+    "image": "/college-lms.png",
+    "category": "frontend"
+  },
+  {
+    "id": 15,
+    "title": "Institution Learning Management System",
+    "period": "December 2025 - Present",
+    "description": "A scalable AI-powered Learning Management System built for educational institutions, providing centralized course management, AI-assisted learning, virtual classrooms, intelligent examinations, and organization-wide learning management.",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "WebRTC",
+      "Socket.IO",
+      "REST API",
+      "JWT Authentication",
+      "Docker",
+      "Nginx",
+      "GitHub"
+    ],
+    "features": [
+      "Frontend Architecture & Development",
+      "Authentication & Role-Based Authorization",
+      "Organization & Course Management",
+      "Collaborated with backend and AI teams for API and AI service integrations",
+      "AI Curriculum Generation",
+      "AI Tutor Integration",
+      "Socket.IO Integration",
+      "Live Webinar & Virtual Classroom",
+      "WebRTC Video Communication",
+      "AI Exam Proctoring Integration",
+      "AI Answer Evaluation Integration",
+      "Frontend Deployment"
+    ],
+    "image": "/institution-lms.png",
+    "category": "frontend"
   }
 ]
