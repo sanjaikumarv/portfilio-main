@@ -259,7 +259,7 @@
   {
     "id": 9,
     "title": "Software School Tamil",
-    "period": "Auguest 2025",
+    "period": "Auguest 2025 - September 2025",
     "description": "Built a learning platform to educate and support aspiring software developers through practical, real-world content",
     "technologies": ["Next.js", "Supabase", "GitHub", "Vercel", "Tailwind CSS"],
     "features": [
