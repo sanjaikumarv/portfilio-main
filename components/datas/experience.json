@@ -6,10 +6,12 @@
     "period": "December 2025 – Present",
     "description": "Contributing to the end-to-end development of an AI-powered Learning Management System (LMS), with major involvement in frontend architecture, UI development, and backend feature implementation.",
     "achievements": [
-      "Led the end-to-end development of frontend UI, including component architecture planning, reusable component design, and implementation of responsive user interfaces.",
-      "Translated product requirements into scalable frontend solutions with a strong focus on performance, usability, and maintainability.",
-      "Contributed to backend development by building and integrating RESTful APIs, implementing business logic, and supporting database operations.",
-      "Collaborated with cross-functional teams to ensure seamless integration between frontend, backend, and AI-driven features."
+      "Contributed to the end-to-end architecture and development of the AI-powered LMS across both frontend and backend.",
+      "Designed and implemented scalable frontend architecture, reusable components, responsive UI, backend APIs, and business logic.",
+      "Developed and integrated core LMS features including authentication, course management, examinations, live classes, and attendance.",
+      "Integrated AI-powered services including curriculum generation, AI tutoring, exam proctoring, and automated answer evaluation.",
+      "Contributed to real-time live classroom development, including video/audio streaming, chat, polls, collaborative whiteboard, and attendance tracking.",
+      "Collaborated across frontend, backend, and AI components to build and integrate scalable LMS features."
     ]
   },
   {

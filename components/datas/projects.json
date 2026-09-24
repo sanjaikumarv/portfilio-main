@@ -275,20 +275,6 @@
   },
   {
     "id": 10,
-    "title": "Portfolio Website (Kumaresan)",
-    "period": "Auguest 2025",
-    "description": "Build a portfolio web site for UI/UX developer",
-    "technologies": ["Next.js", "GitHub", "Vercel", "Tailwind CSS"],
-    "features": ["Developed all ui sections", "web site planning"],
-    "image": "/kumaresan.png",
-    "category": "frontend",
-    "links": {
-      "demo": "https://kumaresan.vercel.app/",
-      "github": "https://github.com/sanjaikumarv/kumaresan-portfolio"
-    }
-  },
-  {
-    "id": 11,
     "title": "Sync Client",
     "period": "September 2025",
     "description": "Sync Client is a desktop application that automates folder monitoring and file uploads, improving workflow efficiency for invoice processing.",
@@ -309,21 +295,7 @@
     "category": "fullstack"
   },
   {
-    "id": 12,
-    "title": "ACMO Documentation",
-    "period": "November 2025",
-    "description": "ACMO Documentation is a web site that provides comprehensive documentation for ACMO products and services.",
-    "technologies": ["Nextra.js", "Bitbucket", "Jira", "Tailwind CSS"],
-    "features": [
-      "Developed documentation for accounts payable, accounts receivable and Sync client documentation",
-      "Component Planning",
-      "Code Review",
-      "Complete Testing"
-    ],
-    "category": "frontend"
-  },
-  {
-    "id": 13,
+    "id": 11,
     "title": "Learning Management System",
     "period": "December 2025 - Present",
     "description": "An AI-powered Learning Management System designed for schools, colleges and institutions enabling teachers to create courses, generate AI-assisted curriculum, conduct live classes, manage examinations, and provide personalized learning experiences for students.",
@@ -332,8 +304,6 @@
       "React.js",
       "TypeScript",
       "Tailwind CSS",
-      "WebRTC",
-      "Socket.IO",
       "REST API",
       "JWT Authentication",
       "Docker",
@@ -341,21 +311,68 @@
       "GitHub"
     ],
     "features": [
-      "Frontend Architecture & Development",
+      "Frontend & Backend Architecture",
+      "Full-Stack Feature Development",
       "Authentication & Role-Based Authorization",
       "Course & Curriculum Management",
-      "Collaborated with backend and AI teams for API and AI service integrations",
-      "AI Curriculum Generation",
-      "AI Tutor Integration",
-      "Socket.IO Integration",
-      "Live Classroom & Webinar Module",
-      "WebRTC Video Communication",
-      "Automated Attendance Tracking",
+      "AI-Assisted Curriculum Generation",
+      "Live Class & Real-Time Learning Features",
+      "Examination & Assessment Management",
       "AI Exam Proctoring Integration",
       "AI Answer Evaluation Integration",
-      "Frontend Deployment"
+      "AI Tutor Integration",
+      "API & AI Service Integration",
+      "Frontend & Backend Deployment"
     ],
-    "image": "/school-lms.png",
+    "image": "/lms.png",
+    "category": "fullstack"
+  },
+  {
+    "id": 12,
+    "title": "LMS Live Classroom",
+    "period": "July 2026 - August 2026",
+    "description": "Developed an LMS-integrated live classroom for instructors and students, with live video/audio, chat, polls, collaborative whiteboard, automated attendance, and course content. Led end-to-end frontend development and architecture.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Docker",
+      "GitHub",
+      "Livekit"
+    ],
+    "features": [
+      "Live Classroom Architecture & Development",
+      "Live Video & Audio Streaming",
+      "Real-Time Chat & Communication",
+      "Live Polls & Interactive Activities",
+      "Collaborative Whiteboard",
+      "Automated Attendance Tracking",
+      "Live Lesson & Course Content Integration",
+      "Instructor & Student Role Management",
+      "Real-Time Event & Session Management",
+      "LMS Integration & Seamless Class Access"
+    ],
+    "image": "/class-room.png",
+    "category": "frontend"
+  },
+  {
+    "id": 13,
+    "title": "CheckIn Application",
+    "period": "August 2026 - September 2026",
+    "description": "An enterprise mobile workforce management application enabling geofenced attendance, face-verified check-ins, live field visit tracking, route monitoring, leave and overtime management, and real-time workforce visibility for administrators.",
+    "technologies": ["React Native", "TypeScript", "Tailwind CSS", "GitHub"],
+    "features": [
+      "Check-in Module Architecture & Development",
+      "AI Powered Face Verification for User Check-in and Check-out",
+      "Real-Time Attendance Tracking",
+      "Role-Based Check-in Management",
+      "Attendance Status Management",
+      "Check-in History & Records",
+      "Automated Attendance Updates",
+      "API Integration",
+      "Validation & Error Handling",
+      "Frontend & Backend Development"
+    ],
     "category": "frontend"
   }
 ]
