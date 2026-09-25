@@ -292,7 +292,8 @@
       "Code Review",
       "Complete Testing"
     ],
-    "category": "fullstack"
+    "category": "fullstack",
+    
   },
   {
     "id": 11,
@@ -325,7 +326,11 @@
       "Frontend & Backend Deployment"
     ],
     "image": "/lms.png",
-    "category": "fullstack"
+    "category": "fullstack",
+    "links": {
+      "demo": "https://college.a2m8ai.com",
+      "github": "https://github.com/Anirudh-a2m8ai/college-lms-frontend"
+    }
   },
   {
     "id": 12,
@@ -353,7 +358,11 @@
       "LMS Integration & Seamless Class Access"
     ],
     "image": "/class-room.png",
-    "category": "frontend"
+    "category": "frontend",
+    "links": {
+      "demo": "https://webinar.a2m8ai.com",
+      "github": "https://github.com/Anirudh-a2m8ai/live-class"
+    }
   },
   {
     "id": 13,
