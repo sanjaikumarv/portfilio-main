@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { resumeUrl } from "@/lib/env";
 
 export default function Hero() {
   const typingRef = useRef<HTMLSpanElement>(null);
@@ -169,7 +170,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}>
               <Link
-                href='https://drive.google.com/file/d/1axzp6aRQvHxGQAGlwBquI8nljxsp7AkM/view?usp=sharing'
+                href={`${resumeUrl}`}
                 target='_blank'
                 rel='noopener noreferrer'>
                 <Button className='gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full transition-all duration-300 hover:scale-105'>
