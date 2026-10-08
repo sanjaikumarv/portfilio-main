@@ -93,5 +93,23 @@
     ],
     "credentialUrl": "https://www.hackerrank.com/certificates/iframe/93c253b4ec2d",
     "description": "Demonstrated strong analytical thinking and algorithm design skills through complex problem-solving challenges."
+  },
+  {
+    "id": "9",
+    "title": "Nest.JS Micro Services",
+    "issuer": "Udemy",
+    "date": "October 2025",
+    "level": "Advanced",
+    "skills": [
+      "Nest JS",
+      "Micro Services",
+      "gRPC",
+      "RabbitMQ",
+      "Redis",
+      "MongoDB",
+      "PostgreSQL"
+    ],
+    "credentialUrl": "https://udemy-certificate.s3.amazonaws.com/image/UC-1d1939f1-8737-4e9e-98e7-7dcfdc0eaea2.jpg",
+    "description": "Nest JS Micro Services"
   }
 ]
