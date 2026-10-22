@@ -296,75 +296,6 @@
   },
   {
     "id": 11,
-    "title": "Learning Management System",
-    "period": "December 2025 - Present",
-    "description": "An AI-powered Learning Management System designed for schools, colleges and institutions enabling teachers to create courses, generate AI-assisted curriculum, conduct live classes, manage examinations, and provide personalized learning experiences for students.",
-    "technologies": [
-      "Next.js",
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "REST API",
-      "JWT Authentication",
-      "Docker",
-      "Nginx",
-      "GitHub"
-    ],
-    "features": [
-      "Frontend & Backend Architecture",
-      "Full-Stack Feature Development",
-      "Authentication & Role-Based Authorization",
-      "Course & Curriculum Management",
-      "AI-Assisted Curriculum Generation",
-      "Live Class & Real-Time Learning Features",
-      "Examination & Assessment Management",
-      "AI Exam Proctoring Integration",
-      "AI Answer Evaluation Integration",
-      "AI Tutor Integration",
-      "API & AI Service Integration",
-      "Frontend & Backend Deployment"
-    ],
-    "image": "/lms.png",
-    "category": "fullstack",
-    "links": {
-      "demo": "https://college.a2m8ai.com",
-      "github": "https://github.com/Anirudh-a2m8ai/college-lms-frontend"
-    }
-  },
-  {
-    "id": 12,
-    "title": "LMS Live Classroom",
-    "period": "July 2026 - August 2026",
-    "description": "Developed an LMS-integrated live classroom for instructors and students, with live video/audio, chat, polls, collaborative whiteboard, automated attendance, and course content. Led end-to-end frontend development and architecture.",
-    "technologies": [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Docker",
-      "GitHub",
-      "Livekit"
-    ],
-    "features": [
-      "Live Classroom Architecture & Development",
-      "Live Video & Audio Streaming",
-      "Real-Time Chat & Communication",
-      "Live Polls & Interactive Activities",
-      "Collaborative Whiteboard",
-      "Automated Attendance Tracking",
-      "Live Lesson & Course Content Integration",
-      "Instructor & Student Role Management",
-      "Real-Time Event & Session Management",
-      "LMS Integration & Seamless Class Access"
-    ],
-    "image": "/class-room.png",
-    "category": "frontend",
-    "links": {
-      "demo": "https://webinar.a2m8ai.com",
-      "github": "https://github.com/Anirudh-a2m8ai/live-class"
-    }
-  },
-  {
-    "id": 13,
     "title": "CheckIn Application",
     "period": "August 2026 - September 2026",
     "description": "An enterprise mobile workforce management application enabling geofenced attendance, face-verified check-ins, live field visit tracking, route monitoring, leave and overtime management, and real-time workforce visibility for administrators.",
@@ -382,5 +313,75 @@
       "Frontend & Backend Development"
     ],
     "category": "frontend"
+  },
+  {
+    "id": 12,
+    "title": "LMS Live Classroom",
+    "period": "July 2026 – August 2026",
+    "description": "Architected and led end-to-end frontend development of an LMS-integrated live classroom, delivering real-time communication, interactive learning tools, and seamless course integration for instructors and students.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Docker",
+      "GitHub",
+      "LiveKit"
+    ],
+    "features": [
+      "Live Classroom Architecture & Frontend Development",
+      "Real-Time Video & Audio Streaming",
+      "Live Chat, Polls & Interactive Activities",
+      "Collaborative Whiteboard Integration",
+      "Automated Attendance Tracking",
+      "Live Lesson & Course Content Integration",
+      "Instructor & Student Role Management",
+      "Real-Time Session & Event Management",
+      "LMS API Integration & Seamless Class Access"
+    ],
+    "image": "/class-room.png",
+    "category": "frontend",
+    "links": {
+      "demo": "https://webinar.a2m8ai.com",
+      "github": "https://github.com/Anirudh-a2m8ai/live-class"
+    }
+  },
+  {
+    "id": 13,
+    "title": "AI-Powered Learning Management System",
+    "period": "December 2025 – October 2026",
+    "description": "Contributed to the architecture and end-to-end development of an AI-powered LMS for educational institutions, integrating course management, AI-driven learning capabilities, examinations, and real-time classroom experiences.",
+    "technologies": [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "NestJS",
+      "REST APIs",
+      "JWT Authentication",
+      "Docker",
+      "AWS",
+      "Nginx",
+      "GitHub"
+    ],
+    "features": [
+      "Application Architecture & System Design",
+      "Full-Stack Feature Development",
+      "Authentication & Role-Based Authorization",
+      "Course & Curriculum Management",
+      "AI-Assisted Curriculum Generation",
+      "Live Classroom & Real-Time Learning",
+      "Examination & Assessment Management",
+      "AI Exam Proctoring Integration",
+      "Automated Answer Evaluation",
+      "AI Tutor Integration",
+      "Backend API & AI Service Integration",
+      "Application Deployment & Integration"
+    ],
+    "image": "/lms.png",
+    "category": "fullstack",
+    "links": {
+      "demo": "https://college.a2m8ai.com",
+      "github": "https://github.com/Anirudh-a2m8ai/college-lms-frontend"
+    }
   }
 ]

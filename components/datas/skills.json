@@ -1,0 +1,88 @@
+[
+  {
+    "category": "Languages",
+    "description": "Core programming and scripting languages",
+    "icon": "Code",
+    "skills": [
+      { "name": "JavaScript", "level": 95, "highlight": true },
+      { "name": "TypeScript", "level": 92, "highlight": true },
+      { "name": "Python", "level": 60, "highlight": false }
+    ]
+  },
+  {
+    "category": "Backend",
+    "description": "Server-side microservices, frameworks & API design",
+    "icon": "Server",
+    "skills": [
+      { "name": "Node.js", "level": 92, "highlight": true },
+      { "name": "NestJS", "level": 90, "highlight": true },
+      { "name": "Express.js", "level": 94, "highlight": true },
+      { "name": "FastAPI", "level": 60, "highlight": false },
+      { "name": "Fastify", "level": 80, "highlight": false },
+      { "name": "REST API Design", "level": 95, "highlight": true }
+    ]
+  },
+  {
+    "category": "Frontend",
+    "description": "Modern web interfaces, component systems & mobile",
+    "icon": "Layout",
+    "skills": [
+      { "name": "React", "level": 95, "highlight": true },
+      { "name": "Next.js", "level": 92, "highlight": true },
+      { "name": "React Native", "level": 78, "highlight": false },
+      { "name": "Nextra", "level": 88, "highlight": false },
+      { "name": "Tailwind CSS", "level": 95, "highlight": true },
+      { "name": "SCSS", "level": 90, "highlight": false },
+      { "name": "Contentful", "level": 82, "highlight": false }
+    ]
+  },
+  {
+    "category": "Databases & Caching",
+    "description": "Relational, document and high-speed in-memory data stores",
+    "icon": "Database",
+    "skills": [
+      { "name": "MongoDB", "level": 92, "highlight": true },
+      { "name": "Mongoose", "level": 94, "highlight": true },
+      { "name": "Redis", "level": 85, "highlight": true },
+      { "name": "PostgreSQL", "level": 86, "highlight": true },
+      { "name": "Prisma", "level": 88, "highlight": false }
+    ]
+  },
+  {
+    "category": "Architecture",
+    "description": "Scalable system design and distributed communications",
+    "icon": "Cpu",
+    "skills": [
+      { "name": "System Design", "level": 80, "highlight": true },
+      { "name": "Distributed Systems", "level": 60, "highlight": true },
+      { "name": "API Integration", "level": 95, "highlight": true },
+      { "name": "Database Design", "level": 80, "highlight": true }
+    ]
+  },
+  {
+    "category": "Cloud & DevOps",
+    "description": "Cloud hosting, containerization and CI/CD pipelines",
+    "icon": "Cloud",
+    "skills": [
+      { "name": "AWS", "level": 60, "highlight": true },
+      { "name": "Docker", "level": 60, "highlight": true },
+      { "name": "GitHub Actions", "level": 60, "highlight": true },
+      { "name": "Vercel", "level": 95, "highlight": true },
+      { "name": "Hostinger", "level": 80, "highlight": false },
+      { "name": "Render", "level": 80, "highlight": false }
+    ]
+  },
+  {
+    "category": "Tools & Platforms",
+    "description": "Developer tooling, tracking and collaborative ecosystems",
+    "icon": "Terminal",
+    "skills": [
+      { "name": "Git", "level": 95, "highlight": true },
+      { "name": "Bitbucket", "level": 86, "highlight": false },
+      { "name": "Jira", "level": 88, "highlight": false },
+      { "name": "Supabase", "level": 84, "highlight": false },
+      { "name": "Nextra", "level": 88, "highlight": false },
+      { "name": "Contentful", "level": 82, "highlight": false }
+    ]
+  }
+]

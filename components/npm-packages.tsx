@@ -1,329 +1,327 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Package, Calendar, ExternalLink, Github, Download, Star } from "lucide-react"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { useEffect, useState } from "react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Package, Calendar, ExternalLink, Github, Download, Star, Copy, Check, Terminal, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 
 interface NpmPackageData {
-    downloads: {
-        monthly: number
-        weekly: number
-    }
-    dependents: number
-    updated: string
-    searchScore: number
-    package: {
-        name: string
-        keywords: string[]
-        version: string
-        description: string
-        sanitized_name: string
-        publisher: {
-            actor: {
-                name: string
-                type: string
-                email: string
-            }
-            email: string
-            username: string
-        }
-        maintainers: Array<{
-            email: string
-            username: string
-        }>
-        license: string
-        date: string
-        links: {
-            npm: string
-            homepage?: string
-            repository?: string
-            bugs?: string
-        }
-    }
-    score: {
-        final: number
-        detail: {
-            popularity: number
-            quality: number
-            maintenance: number
-        }
-    }
-    flags: {
-        insecure: number
-    }
+  downloads: {
+    monthly: number;
+    weekly: number;
+  };
+  dependents: number;
+  updated: string;
+  searchScore: number;
+  package: {
+    name: string;
+    keywords: string[];
+    version: string;
+    description: string;
+    sanitized_name: string;
+    publisher: {
+      actor: {
+        name: string;
+        type: string;
+        email: string;
+      };
+      email: string;
+      username: string;
+    };
+    maintainers: Array<{
+      email: string;
+      username: string;
+    }>;
+    license: string;
+    date: string;
+    links: {
+      npm: string;
+      homepage?: string;
+      repository?: string;
+      bugs?: string;
+    };
+  };
+  score: {
+    final: number;
+    detail: {
+      popularity: number;
+      quality: number;
+      maintenance: number;
+    };
+  };
+  flags: {
+    insecure: number;
+  };
 }
 
+const getCategoryFromKeywords = (keywords: string[] = []): string => {
+  const keywordStr = keywords.join(" ").toLowerCase();
 
-const getCategoryFromKeywords = (keywords: string[]): string => {
-    const keywordStr = keywords.join(" ").toLowerCase()
-
-    if (keywordStr.includes("mongodb") || keywordStr.includes("database") || keywordStr.includes("aggregation")) {
-        return "Query Utills"
-    } else if (keywordStr.includes("react") || keywordStr.includes("vue") || keywordStr.includes("angular")) {
-        return "Framework"
-    } else if (keywordStr.includes("typescript") || keywordStr.includes("utils") || keywordStr.includes("helpers")) {
-        return "Utility"
-    } else if (keywordStr.includes("tool") || keywordStr.includes("cli") || keywordStr.includes("generator")) {
-        return "Tool"
-    } else {
-        return "Library"
-    }
-}
-
-const getCategoryColor = (category: string) => {
-    switch (category) {
-        case "Utility":
-            return "bg-green-100 text-green-800 hover:bg-green-200"
-        case "Library":
-            return "bg-blue-100 text-blue-800 hover:bg-blue-200"
-        case "Framework":
-            return "bg-purple-100 text-purple-800 hover:bg-purple-200"
-        case "Tool":
-            return "bg-orange-100 text-orange-800 hover:bg-orange-200"
-        case "Database":
-            return "bg-teal-100 text-teal-800 hover:bg-teal-200"
-        default:
-            return "bg-gray-100 text-gray-800 hover:bg-gray-200"
-    }
-}
-
-interface PackageStatsProps {
-    weeklyDownloads: number
-    monthlyDownloads: number
-}
-
-function PackageStats({ weeklyDownloads }: PackageStatsProps) {
-    return (
-        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-            <Download className="w-4 h-4" />
-            <span>{weeklyDownloads.toLocaleString()} downloads/week</span>
-        </div>
-    )
-}
+  if (keywordStr.includes("mongodb") || keywordStr.includes("database") || keywordStr.includes("aggregation")) {
+    return "Database Utility";
+  } else if (keywordStr.includes("react") || keywordStr.includes("vue") || keywordStr.includes("angular")) {
+    return "UI Framework";
+  } else if (keywordStr.includes("typescript") || keywordStr.includes("utils") || keywordStr.includes("helpers")) {
+    return "Developer Tool";
+  } else if (keywordStr.includes("tool") || keywordStr.includes("cli") || keywordStr.includes("generator")) {
+    return "CLI / Tool";
+  } else {
+    return "Open Source Lib";
+  }
+};
 
 const formatDate = (dateString: string): string => {
-    const date = new Date(dateString)
+  try {
+    const date = new Date(dateString);
     return date.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-    })
-}
+      year: "numeric",
+      month: "short",
+    });
+  } catch {
+    return "Recent";
+  }
+};
 
 export default function NpmPackages() {
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    })
-    const [npmPackages, setNpmPackages] = useState<{ objects: NpmPackageData[] }>({ objects: [] })
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch("https://registry.npmjs.org/-/v1/search?text=maintainer:sanjaikumarv&size=250")
-            const data = await response.json()
-            setNpmPackages(data)
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [npmPackages, setNpmPackages] = useState<{ objects: NpmPackageData[] }>({ objects: [] });
+  const [copiedPkg, setCopiedPkg] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://registry.npmjs.org/-/v1/search?text=maintainer:sanjaikumarv&size=250");
+        if (!response.ok) throw new Error("Failed to fetch");
+        const data = await response.json();
+        if (data?.objects && data.objects.length > 0) {
+          setNpmPackages(data);
         }
-        fetchData()
-    }, [])
+      } catch (err) {
+        console.error("NPM fetch error:", err);
+      }
+    };
+    fetchData();
+  }, []);
 
-    return (
-        <section id="npm-packages" className="py-20">
-            <div className="mx-auto px-4">
+  const handleCopy = (pkgName: string) => {
+    navigator.clipboard.writeText(`npm i ${pkgName}`);
+    setCopiedPkg(pkgName);
+    setTimeout(() => setCopiedPkg(null), 2000);
+  };
+
+  const totalWeekly = npmPackages.objects.reduce((acc, p) => acc + (p?.downloads?.weekly || 0), 0);
+
+  return (
+    <section id='npm-packages' className='py-24 bg-gray-50/50 dark:bg-gray-900/40 relative overflow-hidden'>
+      {/* Background ambient accent */}
+      <div className='absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/10 dark:bg-purple-600/10 rounded-full filter blur-3xl pointer-events-none'></div>
+
+      <div className='container mx-auto px-4 relative z-10'>
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className='max-w-6xl mx-auto'>
+          {/* Header */}
+          <div className='text-center mb-16'>
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+              transition={{ duration: 0.4 }}
+              className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800/60 text-purple-700 dark:text-purple-300 text-xs font-semibold uppercase tracking-wider mb-3'>
+              <Sparkles className='h-3.5 w-3.5' />
+              Open Source Contributions
+            </motion.div>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className='text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white'>
+              Published{" "}
+              <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600'>
+                NPM Packages
+              </span>
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className='text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-4'>
+              Publicly available utilities built to streamline query generation, state utilities, and full-stack developer ergonomics.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, width: 0 }}
+              animate={inView ? { opacity: 1, width: "80px" } : { opacity: 0, width: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className='h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mt-4 rounded-full'></motion.div>
+          </div>
+
+          {/* Packages Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-16'>
+            {npmPackages.objects.map((pkgData, index) => {
+              const pkg = pkgData.package;
+              const category = getCategoryFromKeywords(pkg.keywords || []);
+              const isCopied = copiedPkg === pkg.name;
+
+              return (
                 <motion.div
-                    ref={ref}
-                    initial={{ opacity: 0 }}
-                    animate={inView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="max-w-6xl mx-auto"
-                >
-                    {/* Header Section */}
-                    <div className="text-center mb-16">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white inline-block"
-                        >
-                            Published{" "}
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                                NPM Packages
-                            </span>
-                        </motion.h2>
-
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                            transition={{ duration: 0.5, delay: 0.4 }}
-                            className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mt-6"
-                        >
-                            Open-source packages and utilities built to solve real-world development challenges
-                        </motion.p>
-                    </div>
-
-                    {/* Packages Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-                        {npmPackages.objects.map((pkgData, index) => {
-                            const pkg = pkgData.package
-                            const category = getCategoryFromKeywords(pkg.keywords)
-
-                            return (
-                                <motion.div
-                                    key={pkg.name}
-                                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                                    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                                    transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                                    className="transform hover:-translate-y-1 transition-all duration-300"
-                                >
-                                    <Card className="group hover:shadow-xl border-2 hover:border-purple-200 dark:hover:border-purple-800 bg-white dark:bg-gray-800 h-full">
-                                        <CardHeader className="pb-4">
-                                            <div className="flex items-start justify-between">
-                                                <div className="flex-1">
-                                                    <div className="flex items-start gap-3">
-                                                        <div className="p-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg text-white flex-shrink-0">
-                                                            <Package className="h-5 w-5" />
-                                                        </div>
-                                                        <div className="flex-grow">
-                                                            <CardTitle className="text-xl mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors text-gray-900 dark:text-white">
-                                                                {pkg.name}
-                                                            </CardTitle>
-                                                            <CardDescription className="text-base font-medium text-purple-600 dark:text-purple-400">
-                                                                v{pkg.version}
-                                                            </CardDescription>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <Badge className={getCategoryColor(category)}>{category}</Badge>
-                                            </div>
-                                            <div className="flex items-center justify-between mt-3 ml-11">
-                                                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                                                    <Calendar className="w-4 h-4" />
-                                                    <span>{formatDate(pkg.date)}</span>
-                                                </div>
-                                                <PackageStats
-                                                    weeklyDownloads={pkgData.downloads.weekly}
-                                                    monthlyDownloads={pkgData.downloads.monthly}
-                                                />
-                                            </div>
-                                        </CardHeader>
-
-                                        <CardContent className="space-y-4">
-                                            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{pkg.description}</p>
-
-                                            <div className="space-y-2">
-                                                <h4 className="text-sm font-semibold text-gray-900 dark:text-white">Keywords:</h4>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {pkg.keywords.slice(0, 6).map((keyword, tagIndex) => (
-                                                        <Badge
-                                                            key={tagIndex}
-                                                            variant="secondary"
-                                                            className="text-xs bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200"
-                                                        >
-                                                            {keyword}
-                                                        </Badge>
-                                                    ))}
-                                                    {pkg.keywords.length > 6 && (
-                                                        <Badge
-                                                            variant="secondary"
-                                                            className="text-xs bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400"
-                                                        >
-                                                            +{pkg.keywords.length - 6} more
-                                                        </Badge>
-                                                    )}
-                                                </div>
-                                            </div>
-
-                                            <div className="flex gap-2">
-                                                <Button
-                                                    variant="outline"
-                                                    size="sm"
-                                                    className="flex-1 group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 group-hover:text-white transition-all duration-300 bg-transparent border-purple-200 dark:border-purple-800 text-purple-600 dark:text-purple-400"
-                                                    asChild
-                                                >
-                                                    <a href={pkg.links.npm} target="_blank" rel="noopener noreferrer">
-                                                        <ExternalLink className="w-4 h-4 mr-2" />
-                                                        NPM
-                                                    </a>
-                                                </Button>
-                                                {pkg.links.repository && (
-                                                    <Button
-                                                        variant="outline"
-                                                        size="sm"
-                                                        className="flex-1 group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 group-hover:text-white transition-all duration-300 bg-transparent border-purple-200 dark:border-purple-800 text-purple-600 dark:text-purple-400"
-                                                        asChild
-                                                    >
-                                                        <a href={pkg.links.repository} target="_blank" rel="noopener noreferrer">
-                                                            <Github className="w-4 h-4 mr-2" />
-                                                            GitHub
-                                                        </a>
-                                                    </Button>
-                                                )}
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </motion.div>
-                            )
-                        })}
-                    </div>
-
-                    {/* Stats Section */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
-                        className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transform hover:-translate-y-1 transition-all duration-300"
-                    >
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                                transition={{ duration: 0.5, delay: 0.9 }}
-                                className="space-y-2"
-                            >
-                                <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl text-white w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                                    <Package className="h-8 w-8" />
-                                </div>
-                                <div className="text-3xl font-bold text-gray-900 dark:text-white">{npmPackages.objects.length}</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-400">Published Packages</div>
-                            </motion.div>
-
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                                transition={{ duration: 0.5, delay: 1.0 }}
-                                className="space-y-2"
-                            >
-                                <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl text-white w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                                    <Download className="h-8 w-8" />
-                                </div>
-                                <div className="text-3xl font-bold text-gray-900 dark:text-white">
-                                    {npmPackages.objects.reduce((acc, pkg) => acc + pkg.downloads.weekly, 0)}
-                                </div>
-                                <div className="text-sm text-gray-600 dark:text-gray-400">Weekly Downloads</div>
-                            </motion.div>
-
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                                transition={{ duration: 0.5, delay: 1.1 }}
-                                className="space-y-2"
-                            >
-                                <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl text-white w-16 h-16 flex items-center justify-center mx-auto mb-3">
-                                    <Star className="h-8 w-8" />
-                                </div>
-                                <div className="flex items-center justify-center gap-1 mb-2">
-                                    <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                                        MIT
-                                    </span>
-                                </div>
-                                <div className="text-sm text-gray-600 dark:text-gray-400">Open Source License</div>
-                            </motion.div>
+                  key={pkg.name || index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                  transition={{ duration: 0.5, delay: 0.15 + index * 0.1 }}
+                  className='transform hover:-translate-y-1.5 transition-all duration-300'>
+                  <Card className='group bg-white/80 dark:bg-gray-800/90 border border-gray-200/80 dark:border-gray-700/80 hover:border-purple-500/50 dark:hover:border-purple-500/50 backdrop-blur-xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col justify-between'>
+                    <CardHeader className='pb-3'>
+                      <div className='flex items-start justify-between gap-3'>
+                        <div className='flex items-center gap-3'>
+                          <div className='p-2.5 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl text-white shadow-md shadow-purple-500/20'>
+                            <Package className='h-5 w-5' />
+                          </div>
+                          <div>
+                            <CardTitle className='text-lg font-bold group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors text-gray-900 dark:text-white'>
+                              {pkg.name}
+                            </CardTitle>
+                            <CardDescription className='text-xs font-semibold text-purple-600 dark:text-purple-400'>
+                              v{pkg.version} • {category}
+                            </CardDescription>
+                          </div>
                         </div>
-                    </motion.div>
-                </motion.div>
-            </div>
-        </section>
-    )
-}
 
+                        <Badge className='text-[10px] font-medium bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800/40'>
+                          MIT
+                        </Badge>
+                      </div>
+
+                      <div className='flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-3 pt-2 border-t border-gray-100 dark:border-gray-700/50'>
+                        <div className='flex items-center gap-1.5'>
+                          <Calendar className='w-3.5 h-3.5 text-purple-500' />
+                          <span>{formatDate(pkg.date)}</span>
+                        </div>
+                        {pkgData?.downloads?.weekly !== undefined && (
+                          <div className='flex items-center gap-1.5 font-medium text-purple-600 dark:text-purple-400'>
+                            <Download className='w-3.5 h-3.5' />
+                            <span>{pkgData.downloads.weekly.toLocaleString()} / week</span>
+                          </div>
+                        )}
+                      </div>
+                    </CardHeader>
+
+                    <CardContent className='space-y-4 pt-0'>
+                      <p className='text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed'>
+                        {pkg.description || "A lightweight npm package designed for developer productivity and clean architecture."}
+                      </p>
+
+                      {/* Install Command One-Click Copy */}
+                      <div className='flex items-center justify-between p-2 rounded-xl bg-gray-100 dark:bg-gray-950/70 border border-gray-200 dark:border-gray-800 text-xs font-mono text-gray-700 dark:text-gray-300'>
+                        <div className='flex items-center gap-2 overflow-hidden text-ellipsis'>
+                          <Terminal className='h-3.5 w-3.5 text-purple-500 flex-shrink-0' />
+                          <span className='truncate'>npm i {pkg.name}</span>
+                        </div>
+                        <button
+                          type='button'
+                          onClick={() => handleCopy(pkg.name)}
+                          className='p-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors ml-2 flex-shrink-0'
+                          title='Copy install command'>
+                          {isCopied ? (
+                            <Check className='h-3.5 w-3.5 text-emerald-500' />
+                          ) : (
+                            <Copy className='h-3.5 w-3.5 text-gray-500' />
+                          )}
+                        </button>
+                      </div>
+
+                      {/* Keywords */}
+                      {pkg.keywords && pkg.keywords.length > 0 && (
+                        <div className='flex flex-wrap gap-1'>
+                          {pkg.keywords.slice(0, 5).map((keyword, kIdx) => (
+                            <span
+                              key={kIdx}
+                              className='px-2 py-0.5 rounded text-[10px] font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'>
+                              #{keyword}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      {/* Action Links */}
+                      <div className='flex gap-2 pt-2'>
+                        {pkg.links?.npm && (
+                          <Button
+                            variant='outline'
+                            size='sm'
+                            className='flex-1 h-8 text-xs rounded-lg border-purple-200 dark:border-purple-800 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/40'
+                            asChild>
+                            <a href={pkg.links.npm} target='_blank' rel='noopener noreferrer'>
+                              <ExternalLink className='w-3 h-3 mr-1.5' />
+                              NPM Page
+                            </a>
+                          </Button>
+                        )}
+                        {pkg.links?.repository && (
+                          <Button
+                            variant='outline'
+                            size='sm'
+                            className='flex-1 h-8 text-xs rounded-lg border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                            asChild>
+                            <a href={pkg.links.repository} target='_blank' rel='noopener noreferrer'>
+                              <Github className='w-3 h-3 mr-1.5' />
+                              Source
+                            </a>
+                          </Button>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Bottom Stats Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className='rounded-3xl bg-white/80 dark:bg-gray-800/80 border border-gray-200/80 dark:border-gray-700/80 backdrop-blur-xl shadow-xl p-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-gray-700'>
+              <div className='pt-4 md:pt-0'>
+                <div className='text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'>
+                  {npmPackages.objects.length || 5}
+                </div>
+                <div className='text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mt-1'>
+                  Published Packages
+                </div>
+              </div>
+              <div className='pt-4 md:pt-0'>
+                <div className='text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'>
+                  {totalWeekly > 0 ? `${totalWeekly.toLocaleString()}+` : "Active"}
+                </div>
+                <div className='text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mt-1'>
+                  Weekly Downloads
+                </div>
+              </div>
+              <div className='pt-4 md:pt-0'>
+                <div className='text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600'>
+                  100%
+                </div>
+                <div className='text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mt-1'>
+                  Open-Source (MIT)
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
